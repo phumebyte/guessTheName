@@ -1,24 +1,12 @@
 package org.example;
-
-
-
-
-
 import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
         int attemptCount = 3;
 
-
-
-        Guess guessName = new Guess("Guess my name!!!!", "Hlulani", "Phume", "DeeCoder", "Tshimo","Anonymous");
+        Guess guessName = new Guess("Guess my name!!!!", "Hlulani", "Phume", "DeeCoder", "Tshimo", "Anonymous" );
         guessName.display();
-
-        guessName.getRandom();
-
-
 
         Scanner scanInput = new Scanner(System.in);
 
