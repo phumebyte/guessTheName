@@ -1,13 +1,24 @@
 package org.example;
 
+
+
+
+
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
         int attemptCount = 3;
 
-        Guess guessName = new Guess("Guess my name!!!!", "Hlulani", "Phume", "DeeCoder", "Tshimo", "Anonymous", "Anonymous");
+
+
+        Guess guessName = new Guess("Guess my name!!!!", "Hlulani", "Phume", "DeeCoder", "Tshimo","Anonymous");
         guessName.display();
+
+        guessName.getRandom();
+
+
 
         Scanner scanInput = new Scanner(System.in);
 
@@ -24,7 +35,7 @@ public class Main {
                     System.out.println("Wrong LOSER! Try again. You have " + attemptCount + " attempt/s left.");
                     guessName.display();
                 } else {
-                    System.out.println("You've run out of attempt/s. LOSER");
+                    System.out.println("You've run out of attempts. LOSER");
                 }
             }
         }

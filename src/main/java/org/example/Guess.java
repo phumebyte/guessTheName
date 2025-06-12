@@ -1,5 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Guess {
     private String question;
     private String option1;
@@ -7,20 +11,21 @@ public class Guess {
     private String option3;
     private String option4;
     private String option5;
-    private String answer;
+//    private String answer;
+    private String selectedItem;
 
-    Guess(String question, String option1, String option2, String option3, String option4, String option5, String answer){
+    Guess(String question, String option1, String option2, String option3, String option4, String option5){
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
         this.option4 = option4;
         this.option5 = option5;
-        this.answer = answer;
+        getRandom();
     }
 
-    boolean compareAnswer(String answer){
-        if(answer.toLowerCase().equals(this.answer.toLowerCase())){
+    boolean compareAnswer(String selectedItem){
+        if(selectedItem.toLowerCase().equals(this.selectedItem.toLowerCase())){
             return true;
         } else {
             return false;
@@ -34,6 +39,23 @@ public class Guess {
         System.out.println("c)" + this.option3);
         System.out.println("d)" + this.option4);
         System.out.println("e)" + this.option5);
+    }
+
+    void getRandom(){
+        List<String> items = new ArrayList<>();
+        items.add(option1);
+        items.add(option2);
+        items.add(option3);
+        items.add(option4);
+        items.add(option5);
+
+        Random random = new Random();
+        this.selectedItem = items.get(random.nextInt(items.size()));
+        System.out.println("Randomly selected item: " + this.selectedItem);
+
+
+
+
     }
 
     public void setQuestion(String question) {
