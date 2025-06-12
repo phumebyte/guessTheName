@@ -24,7 +24,7 @@ public class Main {
                     System.out.println("Wrong LOSER! Try again. You have " + attemptCount + " attempt/s left.");
                     guessName.display();
                 } else {
-                    System.out.println("You've run out of attempts. LOSER");
+                    System.out.println("You've run out of attempt/s. LOSER");
                 }
             }
         }
